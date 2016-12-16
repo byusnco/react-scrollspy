@@ -138,11 +138,11 @@ export class Scrollspy extends React.Component {
 
   componentDidMount () {
     this._initFromProps()
-    window.addEventListener('scroll', this._handleSpy)
+    document.querySelector('.scroll-spy-container').addEventListener('scroll', this._handleSpy)
   }
 
   componentWillUnmount () {
-    window.removeEventListener('scroll', this._handleSpy)
+    document.querySelector('.scroll-spy-container').removeEventListener('scroll', this._handleSpy)
   }
 
   componentWillReceiveProps () {
